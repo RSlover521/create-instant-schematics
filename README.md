@@ -1,8 +1,6 @@
-<p align="center">
-  <img width="160" height="160" alt="Create: Instant Schematics icon" src="https://raw.githubusercontent.com/RSlover521/create-instant-schematics/main/src/main/resources/icon.png">
-</p>
+# Create: Instant Schematics
 
-<h1 align="center">Create: Instant Schematics</h1>
+![Create: Instant Schematics icon](https://cdn.jsdelivr.net/gh/RSlover521/create-instant-schematics@main/src/main/resources/icon.png)
 
 <p align="center">
   <a href="https://github.com/RSlover521/create-instant-schematics/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/RSlover521/create-instant-schematics?style=for-the-badge"></a>
@@ -38,6 +36,27 @@ The mod does **not** introduce a custom schematic format, GUI, uploader, printer
 * Validates schematic paths to prevent directory traversal.
 * Preserves schematic files when unloading a schematic item.
 * Synchronizes the client cache so Create can immediately display the hologram preview.
+
+---
+
+## How To Use This Mod
+
+1. Install **Create: Instant Schematics**. See the installation instructions below.
+
+2. Choose the workflow that matches your setup:
+
+    * **Singleplayer:** Simply use the provided commands to load or unload schematics.
+    * **Multiplayer Server:** Continue with the steps below.
+
+3. Ensure the desired `.nbt` schematic is available on the server under:
+
+   ```text
+   schematics/uploaded/<playerName>/
+   ```
+
+   Once the file is there, use `/cischematic load <filename>` to instantly convert a held Empty Schematic into a written Create Schematic.
+
+4. If your server host does **not** allow direct file uploads (for example, Aternos), upload the schematic once using Create's normal Schematic Table. After the file has been uploaded to the server, you can reuse it instantly with the provided commands without waiting for another upload.
 
 ---
 
