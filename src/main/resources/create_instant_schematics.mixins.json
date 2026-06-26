@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.rslover521.createInstantSchematics.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "SchematicItemMixin"
+  ],
+  "client": [
+    "SchematicRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
