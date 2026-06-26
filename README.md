@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="160" height="160" alt="Create: Instant Schematics icon" src="src/main/resources/icon.png">
+  <img width="160" height="160" alt="Create: Instant Schematics icon" src="https://raw.githubusercontent.com/RSlover521/create-instant-schematics/main/src/main/resources/icon.png">
 </p>
 
 <h1 align="center">Create: Instant Schematics</h1>
