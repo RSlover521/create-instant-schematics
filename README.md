@@ -1,6 +1,6 @@
 # Create: Instant Schematics
 
-![Create: Instant Schematics icon](https://cdn.jsdelivr.net/gh/RSlover521/create-instant-schematics@main/src/main/resources/icon.png)
+![Create: Instant Schematics icon](https://cdn.jsdelivr.net/gh/RSlover521/create-instant-schematics@main/src/main/resources/create-instant-schematics-icon.png)
 
 <p align="center">
   <a href="https://github.com/RSlover521/create-instant-schematics/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/RSlover521/create-instant-schematics?style=for-the-badge"></a>
@@ -45,7 +45,8 @@ The mod does **not** introduce a custom schematic format, GUI, uploader, printer
 
 2. Choose the workflow that matches your setup:
 
-    * **Singleplayer:** Simply use the provided commands to load or unload schematics.
+    * **Singleplayer:** Simply use the provided commands to load or unload schematics. 
+      * `/cischematic load <filename>`
     * **Multiplayer Server:** Continue with the steps below.
 
 3. Ensure the desired `.nbt` schematic is available on the server under:
@@ -56,7 +57,7 @@ The mod does **not** introduce a custom schematic format, GUI, uploader, printer
 
    Once the file is there, use `/cischematic load <filename>` to instantly convert a held Empty Schematic into a written Create Schematic.
 
-4. If your server host does **not** allow direct file uploads (for example, Aternos), upload the schematic once using Create's normal Schematic Table. After the file has been uploaded to the server, you can reuse it instantly with the provided commands without waiting for another upload.
+4. If your server host does **not** allow direct file uploads (for example, Aternos), upload the schematic once using the Create's Schematic Table. After the file has been uploaded to the server, you can reuse it instantly with the provided commands without waiting for another upload.
 
 ---
 
@@ -64,6 +65,7 @@ The mod does **not** introduce a custom schematic format, GUI, uploader, printer
 
 ```mcfunction
 /cischematic load <filename>
+/cischematic list
 /cischematic unload
 ```
 
@@ -71,6 +73,7 @@ Short aliases are also available:
 
 ```mcfunction
 /cis load <filename>
+/cis list
 /cis unload
 ```
 
@@ -86,13 +89,19 @@ Example:
 
 ## Schematic Files
 
-Schematics are loaded from:
+In singleplayer, schematics are loaded from:
+
+```text
+schematics/<filename>.nbt
+```
+
+On multiplayer servers, schematics are loaded from:
 
 ```text
 schematics/uploaded/<playerName>/<filename>.nbt
 ```
 
-For example, player `Steve` would load:
+For example, player `Steve` on a multiplayer server would load:
 
 ```text
 schematics/uploaded/Steve/example.nbt

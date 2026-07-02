@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(value = SchematicItem.class, remap = false)
 public class SchematicItemMixin {
-    @ModifyConstant(method = "loadSchematic", constant = @Constant(longValue = 536870912L))
+    @ModifyConstant(method = "loadSchematic", constant = @Constant(longValue = 536870912L), require = 0)
     private static long createInstantSchematics$increaseSchematicNbtLimit(long originalLimit) {
         return 1073741824L;
     }

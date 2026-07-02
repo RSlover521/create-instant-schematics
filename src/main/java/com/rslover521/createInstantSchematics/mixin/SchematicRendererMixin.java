@@ -17,7 +17,8 @@ public class SchematicRendererMixin {
             method = "drawLayer",
             at = @At(value = "INVOKE",
                     target = "Lnet/minecraft/core/BlockPos;betweenClosed(IIIIII)Ljava/lang/Iterable;",
-                    remap = true))
+                    remap = true),
+            require = 0)
     private Iterable<BlockPos> createInstantSchematics$onlyRenderStoredBlocks(int minX, int minY, int minZ,
                                                                                int maxX, int maxY, int maxZ) {
         return schematic.getAllPositions();
